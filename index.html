@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação da API</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <i class="fas fa-code"></i>
+                    Documentação da API
+                </h1>
+                <div class="header-actions">
+                    <div class="search-container">
+                        <input type="text" id="searchInput" placeholder="Pesquisar endpoints..." class="search-input">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3>Categorias</h3>
+                    <div class="stats">
+                        <span id="totalEndpoints">0</span> endpoints
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Filtrar por Método</h4>
+                    <div class="method-filters">
+                        <button class="method-filter active" data-method="all">Todos</button>
+                        <button class="method-filter" data-method="GET">GET</button>
+                        <button class="method-filter" data-method="POST">POST</button>
+                        <button class="method-filter" data-method="PUT">PUT</button>
+                        <button class="method-filter" data-method="DELETE">DELETE</button>
+                    </div>
+                </div>
+
+                <nav class="categories-nav" id="categoriesNav">
+                    <!-- Categorias serão carregadas dinamicamente -->
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <div class="welcome-section" id="welcomeSection">
+                    <div class="welcome-card">
+                        <h2>Bem-vindo à Documentação da API</h2>
+                        <p>Esta documentação contém todos os endpoints disponíveis na API, organizados por categorias para facilitar a navegação.</p>
+                        
+                        <div class="quick-stats">
+                            <div class="stat-card">
+                                <i class="fas fa-layer-group"></i>
+                                <div>
+                                    <h3 id="totalCategories">0</h3>
+                                    <p>Categorias</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-plug"></i>
+                                <div>
+                                    <h3 id="totalEndpointsMain">0</h3>
+                                    <p>Endpoints</p>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <i class="fas fa-server"></i>
+                                <div>
+                                    <h3>REST</h3>
+                                    <p>API Type</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="getting-started">
+                            <h3>Como usar esta documentação</h3>
+                            <ul>
+                                <li>Use a barra de pesquisa para encontrar endpoints específicos</li>
+                                <li>Navegue pelas categorias na barra lateral</li>
+                                <li>Filtre por método HTTP (GET, POST, PUT, DELETE)</li>
+                                <li>Clique em qualquer endpoint para ver detalhes e exemplos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="endpoints-section" id="endpointsSection" style="display: none;">
+                    <div class="section-header">
+                        <h2 id="sectionTitle">Endpoints</h2>
+                        <div class="section-actions">
+                            <button class="btn-secondary" id="expandAll">
+                                <i class="fas fa-expand-alt"></i>
+                                Expandir Todos
+                            </button>
+                            <button class="btn-secondary" id="collapseAll">
+                                <i class="fas fa-compress-alt"></i>
+                                Colapsar Todos
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="endpoints-list" id="endpointsList">
+                        <!-- Endpoints serão carregados dinamicamente -->
+                    </div>
+                </div>
+
+                <div class="no-results" id="noResults" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>Nenhum resultado encontrado</h3>
+                    <p>Tente ajustar os filtros ou termo de pesquisa.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+        <p>Carregando documentação...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
