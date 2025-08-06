@@ -48,6 +48,23 @@
         <div class="main-content">
             <!-- Barra Lateral Melhorada -->
             <aside class="sidebar">
+                 <!-- Informações de Ajuda -->
+                <div class="help-section">
+                    <button class="help-toggle" id="helpToggle">
+                        <i class="fas fa-question-circle"></i>
+                        Ajuda
+                    </button>
+                    <div class="help-content" id="helpContent" style="display: none;">
+                        <h5>Como usar:</h5>
+                        <ul>
+                            <li>Clique numa categoria para ver os endpoints</li>
+                            <li>Use os filtros para encontrar métodos específicos</li>
+                            <li>Pesquise por nome, método ou descrição</li>
+                            <li>Clique nos endpoints para ver detalhes</li>
+                        </ul>
+                    </div>
+                </div>
+               
                 <div class="sidebar-header">
                     <h3>
                         <i class="fas fa-layer-group"></i>
@@ -97,8 +114,7 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- Filtros Adicionais -->
+                   <!-- Filtros Adicionais -->
                 <div class="filter-section">
                     <h4>
                         <i class="fas fa-sort"></i>
@@ -116,22 +132,7 @@
                     <!-- Categorias carregadas dinamicamente -->
                 </nav>
 
-                <!-- Informações de Ajuda -->
-                <div class="help-section">
-                    <button class="help-toggle" id="helpToggle">
-                        <i class="fas fa-question-circle"></i>
-                        Ajuda
-                    </button>
-                    <div class="help-content" id="helpContent" style="display: none;">
-                        <h5>Como usar:</h5>
-                        <ul>
-                            <li>Clique numa categoria para ver os endpoints</li>
-                            <li>Use os filtros para encontrar métodos específicos</li>
-                            <li>Pesquise por nome, método ou descrição</li>
-                            <li>Clique nos endpoints para ver detalhes</li>
-                        </ul>
-                    </div>
-                </div>
+               
             </aside>
 
             <!-- Conteúdo Principal Melhorado -->

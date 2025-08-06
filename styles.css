@@ -261,14 +261,14 @@ body {
    ================================================================= */
 
 .sidebar {
-    width: 320px;
+    width: 380px;
     background: var(--surface-color);
     border-right: 1px solid var(--border-color);
     padding: 1.5rem;
     overflow-y: auto;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 100px);
     position: sticky;
-    top: 80px;
+    top: 100px;
 }
 
 .sidebar-header {
