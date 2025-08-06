@@ -60,9 +60,9 @@ Faça upload dos arquivos para qualquer servidor web (Apache, Nginx, etc.) e ace
 
 ## 📊 Estatísticas da API
 
-- **Total de Endpoints**: 647
-- **Categorias**: 82
-- **Métodos Suportados**: GET, POST, PUT, DELETE
+- **Total de Endpoints**: 664
+- **Categorias**: 74
+- **Métodos Suportados**: GET, POST, PUT, DELETE, PATCH
 - **Principais Categorias**:
   - Estatísticas: 51 endpoints
   - Inscrição: 34 endpoints
