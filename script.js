@@ -1,5 +1,5 @@
 // ===================================================================
-// DOCUMENTAÇÃO DA API - VERSÃO MELHORADA 2.0
+// DOCUMENTAÇÃO DA API SIGAPE - VERSÃO MELHORADA 2.0
 // ===================================================================
 // Funcionalidades principais:
 // - Navegação intuitiva por categorias
@@ -13,7 +13,7 @@
 
 // Configurações globais
 const CONFIG = {
-    API_BASE_URL: 'http://localhost:3000',
+    API_BASE_URL: 'api.url',
     DEBOUNCE_DELAY: 300,
     ANIMATION_DURATION: 300,
     MAX_RECENT_SEARCHES: 5,
